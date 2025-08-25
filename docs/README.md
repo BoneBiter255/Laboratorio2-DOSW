@@ -51,3 +51,27 @@ https://profile.es/blog/principios-solid-desarrollo-software-calidad/
 
 
 ---
+
+## Retos Completados
+
+## Reto 6
+**Categoria:** Comportamiento
+**Patrón utilizado:** Cadena de responsabilidad
+**Justificación:** Este patrón permite que varios objetos puedan manejar una solicitud. En este reto, los tickets peueden ser resueltos por distintos tecnicos según su nivel y prioridad.
+
+**¿Como lo aplicamos?:** 
+1. Se creo la clase ticket con atributos: nivel, prioridad y descripción.
+2. Se implementó una interfaz Handler, que contiene un metodo para procesar la solicitud, y otro para asociar al siguiente tecnico.
+3. Cada clase concreta de Tecnico basico, intermedio, avanzado, implementa la interfaz.
+4. Cada técnico tiene referencia al siguiente.
+5. Si ninguno puede resolver, se marca como "pendiente de escalamiento".
+6. Se usan streams para contar tickets por nivel y prioridad.
+
+## Reto 7
+**Categoria:** Comportamiento
+**Patrón Utilizado:** Comando
+**Justificación:** Este patrón permite encapsukar una solicitud como un objeto, lo que nos permite ejecutar una secuencia de acciones sobre diferentes objetos, en este caso, puertas, luces y reproductor de musica.
+
+**¿Como lo aplicamos?:** 
+1. Ya que usamos el patrón comando, cada acción disponible (encender luz, abrir puerta, reproducir musica...) es una clase con métodos para ejecutar y dehacer. El control remoto actúa como invocador, ejecutando los comandos sin conocer su lógica interna. 
+2. Un historial guarda todas las acciones y quién las realizó, permitiendo deshacer y mostrar un resumen final.

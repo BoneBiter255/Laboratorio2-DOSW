@@ -1,5 +1,15 @@
 #Patrones y evidencias Por reto
 
+RETO #1:
+Se usó el patrón strategy porque la clase carrito no sabe cómo se calcula el descuento, simplemente recibe una referencia a un objeto de él, esto permite que la lógica de los descuentos sea intercambiable sin modificar el carrito.  Básicamente separa la preocupación del cálculo de los descuentos del carrito y facilita la adición de nuevos tipos de descuento sin modificar el carrito, lo que aumenta la extensibilidad.
+
+RETO # 2:
+creacional
+Se usó el patrón Builder. Como la hamburguesa puede tener ingredientes personalizados este necesita ser construido paso a paso.
+Se creo la clase ingredient para representar un ingrediente individual, se empleo Burger como producto final luego se usó Burger Builder para ir añadiendo ingredientes de forma fluida. El menú ofrece ingredientes predeterminados y permite agregar ingredientes personalizados.
+
+RETO # 3:
+En este reto se utilizo el patrón Factory ya que tenemos familias de productos relacionados, cada una se gestiona a través de una factory concreta las cuales fueron vehiculosTierraFactory, vehiculoAcuaticoFactory y vehiculoAereoFactory, todas implementan la interfaz común vehiculoFcatory. Es una buena implementación ya que organiza la creación de las familias, mantiene bajo acoplamiento y permite escalabilidad.
 
 
 

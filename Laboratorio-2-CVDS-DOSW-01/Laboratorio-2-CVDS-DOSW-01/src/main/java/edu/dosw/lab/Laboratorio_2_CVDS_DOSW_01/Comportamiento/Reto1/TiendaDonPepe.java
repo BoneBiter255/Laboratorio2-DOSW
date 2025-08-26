@@ -1,3 +1,5 @@
+package edu.dosw.lab.Laboratorio_2_CVDS_DOSW_01.Comportamiento.Reto1;
+
 import java.util.*;
 import java.util.stream.*;
 
